@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.5)
 
 project(tests)
 
-set(SOURCES 
+set(SOURCES
+	test_main.cpp 
     test_bitboardhelpers.cpp
     ../src/bitboardhelpers.cpp
     )

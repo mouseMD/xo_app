@@ -1,4 +1,3 @@
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 
 #include <iostream>
@@ -8,7 +7,39 @@
 
 using namespace std;
 
-TEST_CASE( "A simple test", "[bitboardhelpers]" )
+TEST_CASE("Test getBoardFromCoordinates", "[bitboardhelpers]")
+{
+    SECTION("0 0 0 -> 1")
+    {
+        Coordinates coords(0, 0, 0);
+        BITBOARD bb = getBoardFromCoordinates(coords);
+        REQUIRE(bb == 1);
+    }
+    SECTION("0 0 3 -> 2^3")
+    {
+        Coordinates coords(0, 0, 3);
+        BITBOARD bb = getBoardFromCoordinates(coords);
+        REQUIRE(bb == 8);
+    }
+    SECTION("1 0 0 -> 2^16")
+    {
+        Coordinates coords(1, 0, 0);
+        BITBOARD bb = getBoardFromCoordinates(coords);
+        REQUIRE(bb == (1ull << 16));
+    }
+}
+
+TEST_CASE("Test getCoordinatesFromBoard", "[bitboardhelpers]")
+{
+    BITBOARD bb = 2;
+    Coordinates coord = getCoordinatesFromBoard(bb);
+    REQUIRE(coord.square_ == 0);
+    REQUIRE(coord.vertical_ == 0);
+    REQUIRE(coord.horizontal_ == 1);
+}
+
+
+TEST_CASE( "From coords to coords", "[bitboardhelpers]" )
 {
     for (uint8_t i = 0; i<4; ++i)
     {
@@ -27,13 +58,3 @@ TEST_CASE( "A simple test", "[bitboardhelpers]" )
     }
 }
 
-TEST_CASE("Test getBoardFromCoordinates", "[bitboardhelpers]")
-{
-    REQUIRE(2 == 2);
-}
-
-
-TEST_CASE("Test getCoordinatesFromBoard", "[bitboardhelpers]")
-{
-    REQUIRE(1 == 2);
-}
