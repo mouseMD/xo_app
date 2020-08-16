@@ -11,6 +11,17 @@ struct Coordinates
     COORD_INDEX square_;
     COORD_INDEX vertical_;
     COORD_INDEX horizontal_;
+    Coordinates() {}
+    Coordinates(COORD_INDEX sq, COORD_INDEX ver, COORD_INDEX hor)
+    {
+        square_ = sq;
+        vertical_ = ver;
+        horizontal_ = hor;
+    }
+    bool operator== (const Coordinates& rhs)
+    {
+        return (this->square_ == rhs.square_) && (this->vertical_ == rhs.vertical_) && (this->horizontal_ == rhs.horizontal_);
+    }
 };
 
 enum Player

@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 3.5)
 project(xo_app LANGUAGES CXX)
 
 set(SOURCES
-    src/main.cpp
     src/game3d_4_4_4.cpp
     src/board_4_4_4.cpp
     src/winchecker.cpp
@@ -23,10 +22,16 @@ set(HEADERS
     src/gameapplication.h
     )
 
-add_executable(xo_app ${SOURCES} ${HEADERS})
+add_library(xo_app ${SOURCES} ${HEADERS})
 
 
 set_target_properties(xo_app PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
     )
+
+enable_testing()
+
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()
