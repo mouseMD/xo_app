@@ -17,6 +17,7 @@ public:
 private:
     BITBOARD xs_;
     BITBOARD os_;
+    mutable BITBOARD win_;
 };
 
 #endif // BOARD_4_4_4_H
