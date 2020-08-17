@@ -21,5 +21,14 @@ Coordinates getCoordinatesFromBoard(BITBOARD board)
 // Four bits must be enabled
 std::array<Coordinates, 4> getWinCoordsFromBoard(BITBOARD board)
 {
-    return {};
+    std::array<Coordinates, 4> coordsArray;
+    std::bitset<64> bits(board);
+    for (std::size_t i =0 ; i< 4; ++i)
+    {
+        std::size_t pos = bits._Find_first();
+        coordsArray[i] = {static_cast<uint8_t>(pos / 16),
+                          static_cast<uint8_t>((pos % 16) / 4), static_cast<uint8_t>((pos % 16) % 4)};
+        bits.reset(pos);
+    }
+    return coordsArray;
 }
