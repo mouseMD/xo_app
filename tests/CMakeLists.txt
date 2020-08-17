@@ -4,8 +4,11 @@ project(tests)
 
 set(SOURCES
 	test_main.cpp 
-    test_bitboardhelpers.cpp
-    ../src/bitboardhelpers.cpp
+    	test_bitboardhelpers.cpp
+	test_board_4_4_4.cpp
+    	../src/bitboardhelpers.cpp
+	../src/board_4_4_4.cpp
+	../src/winchecker.cpp
     )
 
 add_executable(tests ${SOURCES})

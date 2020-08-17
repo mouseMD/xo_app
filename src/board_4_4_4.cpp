@@ -1,5 +1,8 @@
 #include "board_4_4_4.h"
 
+#include <iostream>
+#include <string>
+
 #include "winchecker.h"
 #include "bitboardhelpers.h"
 
@@ -54,4 +57,33 @@ std::array<Coordinates, 4> Board_4_4_4::getWinCoords() const
         return getWinCoordsFromBoard(win_);
     else
         return {};
+}
+
+void Board_4_4_4::debugPrint()
+{
+    for (uint8_t i = 0; i<4; ++i)
+    {
+        std::string line;
+        for (uint8_t j = 0; j<4; ++j)
+        {
+            for (uint8_t k = 0; k<4; ++k)
+            {
+                BITBOARD bb = getBoardFromCoordinates(Coordinates(j, k, i));
+                if (bb & xs_)
+                {
+                    line += "X";
+                }
+                else if (bb & os_)
+                {
+                    line += "O";
+                }
+                else
+                {
+                    line += ".";
+                }
+            }
+            line += "    ";
+        }
+        std::cout << line << std::endl;
+    }
 }
