@@ -61,6 +61,7 @@ std::array<Coordinates, 4> Board_4_4_4::getWinCoords() const
 
 void Board_4_4_4::debugPrint()
 {
+    std::cout << "*" << std::endl;
     for (uint8_t i = 0; i<4; ++i)
     {
         std::string line;

@@ -8,9 +8,9 @@ using GAME_INDEX = uint64_t;
 
 struct Coordinates
 {
-    COORD_INDEX square_;
-    COORD_INDEX vertical_;
-    COORD_INDEX horizontal_;
+    COORD_INDEX square_=0;
+    COORD_INDEX vertical_=0;
+    COORD_INDEX horizontal_=0;
     Coordinates() {}
     Coordinates(COORD_INDEX sq, COORD_INDEX ver, COORD_INDEX hor)
     {

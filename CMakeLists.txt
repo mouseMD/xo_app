@@ -9,6 +9,7 @@ set(SOURCES
     src/bitboardhelpers.cpp
     src/gamemanager.cpp
     src/gameapplication.cpp
+    src/magic.cpp
     )
 set(HEADERS
     src/game3d_4_4_4.h
@@ -20,6 +21,7 @@ set(HEADERS
     src/game_types.h
     src/common_types.h
     src/gameapplication.h
+    src/magic.h
     )
 
 add_library(xo_app ${SOURCES} ${HEADERS})
