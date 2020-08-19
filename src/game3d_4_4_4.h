@@ -10,7 +10,7 @@
 class Game3D_4_4_4
 {
 public:
-    Game3D_4_4_4(GAME_INDEX index);
+    explicit Game3D_4_4_4(GAME_INDEX index);
     void setNewMove(Player player, const Coordinates& coords);
     void reset();
     bool isFinished() const;

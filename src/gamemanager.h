@@ -17,6 +17,7 @@ public:
     Game3D_4_4_4& getGame(GAME_INDEX index);
 private:
     std::unordered_map<GAME_INDEX, Game3D_4_4_4> games;
+    GAME_INDEX currentMaxIndex_;
 };
 
 #endif // GAMEMANAGER_H
