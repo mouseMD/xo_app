@@ -1,6 +1,7 @@
 #include "catch.hpp"
 
 #include "board_4_4_4.h"
+#include "magic.h"
 
 
 TEST_CASE("Empty field", "[board]")
@@ -49,6 +50,7 @@ TEST_CASE("The same square", "[board]")
 
 TEST_CASE("CheckWin on empty board", "[board]")
 {
+    magic::generateWinPositions();
     Board_4_4_4 board;
     REQUIRE(board.checkWin(X_Player) == false);
 }
