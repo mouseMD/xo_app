@@ -17,10 +17,10 @@ public:
     Result result() const;
     bool isNew() const;
     bool isInProcess() const;
-    std::array<Coordinates, 4>& getWinCoords() const;
-    std::vector<Coordinates>& getMoves() const;
+    const std::array<Coordinates, 4> getWinCoords() const;
+    const std::vector<Coordinates> &getMoves() const;
 private:
-    GAME_INDEX index_;
+    const GAME_INDEX index_;
     GameStatus status_;
     Board_4_4_4 board_;
     Player player_to_move_;

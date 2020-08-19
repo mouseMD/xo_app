@@ -13,6 +13,7 @@ public:
     void clear();
     void setMark(Player player, const Coordinates& coord);
     bool checkWin(Player player) const;
+    bool checkDraw() const;
     std::array<Coordinates, 4> getWinCoords() const;
     void debugPrint();
 private:
