@@ -53,7 +53,7 @@ bool Board_4_4_4::checkWin(Player player) const
 
 bool Board_4_4_4::checkDraw() const
 {
-    return false;
+    return ~(xs_ | os_) == 0;
 }
 
 std::array<Coordinates, 4> Board_4_4_4::getWinCoords() const
