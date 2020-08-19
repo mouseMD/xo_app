@@ -2,7 +2,8 @@
 #include "common_types.h"
 #include "bitboardhelpers.h"
 
-#include <iostream>
+#include <set>
+#include <algorithm>
 
 namespace magic
 {
@@ -41,6 +42,9 @@ BITBOARD getBitboardFromRanges(IndexRange i1, IndexRange i2, IndexRange i3)
         {
         case _1: case _2: case _3: case _4:
             winLine[i].square_ = static_cast<COORD_INDEX>(i1)-1;
+            break;
+        case UP:
+            winLine[i].square_ = static_cast<COORD_INDEX>(i);
             break;
         case DOWN:
             winLine[i].square_ = static_cast<COORD_INDEX>(3 - i);
@@ -89,10 +93,8 @@ BITBOARD getBitboardFromRanges(IndexRange i1, IndexRange i2, IndexRange i3)
         }
     }
 
-
     for (std::size_t i =0 ; i<4; ++i)
     {
-        std::cout << int(winLine[i].square_) <<"--"<<int(winLine[i].vertical_)<<"--"<<int(winLine[i].horizontal_)<<std::endl;
         bb |= getBoardFromCoordinates(winLine[i]);
     }
 
@@ -101,9 +103,9 @@ BITBOARD getBitboardFromRanges(IndexRange i1, IndexRange i2, IndexRange i3)
 
 void generateWinPositions()
 {
-    std::size_t index = 0;
+    std::set<BITBOARD> bbSet;
 
-    for (int i = IndexRange::UP; i<IndexRange::DOWN; ++i)
+    for (int i = IndexRange::UP; i<=IndexRange::DOWN; ++i)
     {
         for (int j=IndexRange::UP; j<=IndexRange::DOWN; ++j)
         {
@@ -111,12 +113,12 @@ void generateWinPositions()
             {
                 if (isValidIndexes(static_cast<IndexRange>(i), static_cast<IndexRange>(j), static_cast<IndexRange>(k)))
                 {
-                    winPositions[index] = getBitboardFromRanges(static_cast<IndexRange>(i), static_cast<IndexRange>(j), static_cast<IndexRange>(k));
-                    index++;
+                    bbSet.insert(getBitboardFromRanges(static_cast<IndexRange>(i), static_cast<IndexRange>(j), static_cast<IndexRange>(k)));
                 }
             }
         }
     }
+    std::copy(std::begin(bbSet), std::end(bbSet), std::begin(winPositions));
 }
 
 }
