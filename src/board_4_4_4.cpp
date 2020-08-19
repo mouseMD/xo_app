@@ -41,11 +41,11 @@ bool Board_4_4_4::checkWin(Player player) const
 {
     if (player == X_Player)
     {
-        return checkWin_4_4_4(xs_, os_, win_);
+        return checkWin_4_4_4(xs_, win_);
     }
     else if (player == O_Player)
     {
-        return checkWin_4_4_4(os_, xs_, win_);
+        return checkWin_4_4_4(os_, win_);
     }
     else
         return false;
