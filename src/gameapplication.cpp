@@ -14,9 +14,9 @@ void GameApplication::init()
 
 }
 
-void GameApplication::debugPrint()
+void GameApplication::debugPrint(GAME_INDEX index)
 {
-
+    manager_.getGame(index).debugPrint();
 }
 
 GAME_INDEX GameApplication::createNewGame()

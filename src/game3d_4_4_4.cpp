@@ -1,5 +1,7 @@
 #include "game3d_4_4_4.h"
 
+#include <iostream>
+
 Game3D_4_4_4::Game3D_4_4_4(GAME_INDEX index):index_(index), status_(GameStatus::NEW_GAME),
     player_to_move_(Player::X_Player), result_(NONE)
 {
@@ -68,4 +70,22 @@ const std::array<Coordinates, 4> Game3D_4_4_4::getWinCoords() const
 const std::vector<Coordinates> &Game3D_4_4_4::getMoves() const
 {
     return moves_;
+}
+
+void Game3D_4_4_4::debugPrint()
+{
+    std::cout << "Game index: " << index_ << "\n";
+    std::cout << "Game status: " << status_ << "\n";
+    std::cout << "Player to move: " << player_to_move_ << "\n";
+    std::cout << "Result: " << result_ << "\n";
+    std::cout << "Moves: ";
+    for (const auto& move: moves_)
+    {
+        std::cout << static_cast<int>(move.square_) <<
+                     static_cast<int>(move.vertical_) <<
+                     static_cast<int>(move.horizontal_);
+    }
+    std::cout << "\n";
+    board_.debugPrint();
+    std::cout << std::endl;
 }

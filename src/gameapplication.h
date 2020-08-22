@@ -9,7 +9,7 @@ class GameApplication
 public:
     GameApplication();
     void init();
-    void debugPrint();      // Only for debug
+    void debugPrint(GAME_INDEX index);      // Only for debug
 
     // commands
     GAME_INDEX createNewGame();
