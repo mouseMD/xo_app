@@ -3,3 +3,5 @@ release/
 CMakeLists.txt.user
 external/
 tests/build
+venv/
+
