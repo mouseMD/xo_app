@@ -5,6 +5,15 @@ namespace py = pybind11;
 
 PYBIND11_MODULE(xo_app, m)
 {
+    py::enum_<Player>(m, "Player")
+        .value("X_Player", Player::X_Player)
+        .value("O_Player", Player::O_Player)
+        .value("NONE", Player::None)
+        .export_values();
+
+    py::class_<Coordinates>(m, "Coordinates")
+        .def(py::init<COORD_INDEX, COORD_INDEX, COORD_INDEX>());
+
     py::class_<GameApplication>(m, "GameApplication")
         .def(py::init<>())
         .def("init", &GameApplication::init)
