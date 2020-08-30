@@ -93,3 +93,26 @@ void Board_4_4_4::debugPrint()
         std::cout << line << std::endl;
     }
 }
+
+std::array<Player, 64> Board_4_4_4::getBoard() const
+{
+    std::array<Player, 64> result;
+
+    for (std::size_t i = 0; i < 64; ++i)
+    {
+        BITBOARD mask = 1ull << i;
+        if (xs_ & mask)
+        {
+            result[i] = Player::X_Player;
+        }
+        else if (os_ & mask)
+        {
+            result[i] = Player::O_Player;
+        }
+        else
+        {
+            result[i] = Player::None;
+        }
+    }
+    return result;
+}

@@ -24,6 +24,8 @@ public:
     std::string getMoves(GAME_INDEX index);
     std::string getWinCoords(GAME_INDEX index);
     bool exist(GAME_INDEX index);
+    Player getPlayerToMove(GAME_INDEX index);
+    std::string getBoard(GAME_INDEX index);
 private:
     GameManager manager_;   // now only one manager
 };

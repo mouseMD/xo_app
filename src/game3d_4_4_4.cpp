@@ -89,3 +89,13 @@ void Game3D_4_4_4::debugPrint()
     board_.debugPrint();
     std::cout << std::endl;
 }
+
+Player Game3D_4_4_4::getPlayerToMove() const
+{
+    return player_to_move_;
+}
+
+std::array<Player, 64> Game3D_4_4_4::getBoard() const
+{
+    return board_.getBoard();
+}

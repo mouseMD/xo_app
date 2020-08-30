@@ -16,6 +16,7 @@ public:
     bool checkDraw() const;
     std::array<Coordinates, 4> getWinCoords() const;
     void debugPrint();
+    std::array<Player, 64> getBoard() const;
 private:
     BITBOARD xs_;
     BITBOARD os_;

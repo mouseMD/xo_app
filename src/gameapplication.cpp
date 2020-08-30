@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "magic.h"
+#include <algorithm>
 
 GameApplication::GameApplication()
 {
@@ -88,4 +89,17 @@ bool GameApplication::exist(GAME_INDEX index)
         return false;
     }
     return true;
+}
+
+Player GameApplication::getPlayerToMove(GAME_INDEX index)
+{
+    return manager_.getGame(index).getPlayerToMove();
+}
+
+std::string GameApplication::getBoard(GAME_INDEX index)
+{
+    auto arrayBoard = manager_.getGame(index).getBoard();
+    std::string result;
+    std::copy(std::cbegin(arrayBoard), std::cend(arrayBoard), std::back_inserter(result));
+    return result;
 }

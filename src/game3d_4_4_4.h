@@ -20,6 +20,8 @@ public:
     const std::array<Coordinates, 4> getWinCoords() const;
     const std::vector<Coordinates> &getMoves() const;
     void debugPrint();
+    Player getPlayerToMove() const;
+    std::array<Player, 64> getBoard() const;
 private:
     const GAME_INDEX index_;
     GameStatus status_;
