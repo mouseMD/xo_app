@@ -26,5 +26,7 @@ PYBIND11_MODULE(xo_app, m)
         .def("result", &GameApplication::result)
         .def("get_moves", &GameApplication::getMoves)
         .def("get_win_coords", &GameApplication::getWinCoords)
-        .def("exist", &GameApplication::exist);
+        .def("exist", &GameApplication::exist)
+        .def("get_player_to_move", &GameApplication::getPlayerToMove)
+        .def("get_board", &GameApplication::getBoard);
 }
