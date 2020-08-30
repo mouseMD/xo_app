@@ -40,22 +40,22 @@ void GameApplication::finalize()
 
 }
 
-bool GameApplication::finished(GAME_INDEX index)
+bool GameApplication::finished(GAME_INDEX index) const
 {
     return manager_.getGame(index).isFinished();
 }
 
-bool GameApplication::started(GAME_INDEX index)
+bool GameApplication::started(GAME_INDEX index) const
 {
     return manager_.getGame(index).isInProcess();
 }
 
-uint8_t GameApplication::result(GAME_INDEX index)
+uint8_t GameApplication::result(GAME_INDEX index) const
 {
     return manager_.getGame(index).result();
 }
 
-std::string GameApplication::getMoves(GAME_INDEX index)
+std::string GameApplication::getMoves(GAME_INDEX index) const
 {
     std::string line;
     auto moves = manager_.getGame(index).getMoves();
@@ -68,7 +68,7 @@ std::string GameApplication::getMoves(GAME_INDEX index)
     return line;
 }
 
-std::string GameApplication::getWinCoords(GAME_INDEX index)
+std::string GameApplication::getWinCoords(GAME_INDEX index) const
 {
     std::string line;
     auto coords = manager_.getGame(index).getWinCoords();
@@ -81,22 +81,22 @@ std::string GameApplication::getWinCoords(GAME_INDEX index)
     return line;
 }
 
-bool GameApplication::exist(GAME_INDEX index)
+bool GameApplication::exist(GAME_INDEX index) const
 {
     try {
           manager_.getGame(index);
-    }  catch (std::out_of_range& exp) {
+    }  catch (std::out_of_range& ) {
         return false;
     }
     return true;
 }
 
-Player GameApplication::getPlayerToMove(GAME_INDEX index)
+Player GameApplication::getPlayerToMove(GAME_INDEX index) const
 {
     return manager_.getGame(index).getPlayerToMove();
 }
 
-std::string GameApplication::getBoard(GAME_INDEX index)
+std::string GameApplication::getBoard(GAME_INDEX index) const
 {
     auto arrayBoard = manager_.getGame(index).getBoard();
     std::string result;

@@ -49,8 +49,6 @@ BITBOARD getBitboardFromRanges(IndexRange i1, IndexRange i2, IndexRange i3)
         case DOWN:
             winLine[i].square_ = static_cast<COORD_INDEX>(3 - i);
             break;
-        default:
-            break;
         }
     }
 
@@ -67,8 +65,6 @@ BITBOARD getBitboardFromRanges(IndexRange i1, IndexRange i2, IndexRange i3)
             break;
         case DOWN:
             winLine[i].vertical_ = static_cast<COORD_INDEX>(3 - i);
-            break;
-        default:
             break;
         }
     }
@@ -87,8 +83,6 @@ BITBOARD getBitboardFromRanges(IndexRange i1, IndexRange i2, IndexRange i3)
             break;
         case DOWN:
             winLine[i].horizontal_ = static_cast<COORD_INDEX>(3 - i);
-            break;
-        default:
             break;
         }
     }

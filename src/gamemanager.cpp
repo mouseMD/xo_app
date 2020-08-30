@@ -21,3 +21,8 @@ Game3D_4_4_4 &GameManager::getGame(GAME_INDEX index)
 {
     return games.at(index);
 }
+
+const Game3D_4_4_4 &GameManager::getGame(GAME_INDEX index) const
+{
+    return games.at(index);
+}
