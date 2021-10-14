@@ -4,4 +4,7 @@ CMakeLists.txt.user
 external/
 tests/build
 venv/
+build/
+dist/
+xo_app.egg-info/
 
