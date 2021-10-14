@@ -5,4 +5,4 @@
 
 using BITBOARD = uint64_t;
 
-#endif // BOARD_TYPES_H
+#endif  // BOARD_TYPES_H
