@@ -7,4 +7,5 @@ venv/
 build/
 dist/
 xo_app.egg-info/
+Testing/
 

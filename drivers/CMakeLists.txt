@@ -9,6 +9,3 @@ target_include_directories(cli_driver PUBLIC
     )
 
 target_link_libraries(cli_driver xo_app)
-
-add_test(NAME CliDriver COMMAND cli_driver)
-

@@ -1,0 +1,3 @@
+cd debug
+ctest .
+cd ..
