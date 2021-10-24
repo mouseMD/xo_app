@@ -2,6 +2,7 @@
 #define COMMON_TYPES_H
 
 #include <cstdint>
+#include <array>
 
 using COORD_INDEX = uint8_t;
 using GAME_INDEX = uint64_t;
@@ -26,11 +27,15 @@ struct Coordinates
   }
 };
 
+using BOARD_LINE = std::array<Coordinates, 4>;
+
 enum Player
 {
   X_Player,
   O_Player,
   None
 };
+
+using BOARD_VIEW = std::array<Player, 64>;
 
 #endif  // COMMON_TYPES_H
