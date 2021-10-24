@@ -6,6 +6,7 @@ set(SOURCES
     gamemanager.cpp
     gameapplication.cpp
     magic.cpp
+    board/board.cpp
     )
 set(HEADERS
     game3d_4_4_4.h
@@ -18,6 +19,8 @@ set(HEADERS
     common_types.h
     gameapplication.h
     magic.h
+    board/i_board.h
+    board/board.h
     )
 
 add_library(xo_app ${SOURCES} ${HEADERS})
