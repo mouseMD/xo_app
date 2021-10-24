@@ -18,6 +18,8 @@ class Board : public IBoard
   void debugPrint() override;
   BOARD_VIEW getBoard() const override;
 
+  bool isEmpty() const;
+
  private:
   BITBOARD xs_;
   BITBOARD os_;

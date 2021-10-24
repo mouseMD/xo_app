@@ -118,4 +118,9 @@ BOARD_VIEW Board::getBoard() const
   return result;
 }
 
+bool Board::isEmpty() const
+{
+    return (xs_ == 0) && (os_ == 0) && (win_ == 0);
+}
+
 }  // namespace xo_3d_4
