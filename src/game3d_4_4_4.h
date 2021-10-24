@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include "board_4_4_4.h"
+#include "board/board.h"
 #include "common_types.h"
 #include "game_types.h"
 
@@ -26,7 +26,7 @@ class Game3D_4_4_4
  private:
   const GAME_INDEX index_;
   GameStatus status_;
-  Board_4_4_4 board_;
+  xo_3d_4::Board board_;
   Player player_to_move_;
   Result result_;
   std::vector<Coordinates> moves_;

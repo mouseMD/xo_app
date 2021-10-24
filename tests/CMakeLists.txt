@@ -1,8 +1,6 @@
 set(SOURCES
 	test_main.cpp 
     	test_bitboardhelpers.cpp
-	test_board_4_4_4.cpp
-        test_magic.cpp
     )
 
 add_executable(tests_xo_app ${SOURCES})
