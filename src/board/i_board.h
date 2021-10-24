@@ -17,7 +17,7 @@ class IBoard
   virtual BOARD_LINE getWinCoords() const = 0;
   virtual void debugPrint() = 0;
   virtual BOARD_VIEW getBoard() const = 0;
-  virtual ~IBoard();
+  virtual ~IBoard() = default;
 };
 }  // namespace xo_3d_4
 
