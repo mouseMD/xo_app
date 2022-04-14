@@ -3,7 +3,7 @@
 
 #include <unordered_map>
 
-#include "common_types.h"
+#include "common/common_types.h"
 #include "game3d_4_4_4.h"
 #include "game_types.h"
 

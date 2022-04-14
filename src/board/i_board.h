@@ -3,7 +3,7 @@
 
 #include <array>
 
-#include "common_types.h"
+#include "common/common_types.h"
 
 namespace xo_3d_4
 {

@@ -2,7 +2,7 @@
 #define BOARD_BOARD_H
 
 #include "board/i_board.h"
-#include "board_types.h"
+#include "common/board_types.h"
 
 namespace xo_3d_4
 {

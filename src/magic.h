@@ -3,7 +3,7 @@
 
 #include <array>
 
-#include "board_types.h"
+#include "common/board_types.h"
 
 namespace magic
 {

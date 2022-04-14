@@ -3,8 +3,8 @@
 
 #include <array>
 
-#include "board_types.h"
-#include "common_types.h"
+#include "common/board_types.h"
+#include "common/common_types.h"
 
 BITBOARD getBoardFromCoordinates(const Coordinates& coord);
 Coordinates getCoordinatesFromBoard(BITBOARD board);

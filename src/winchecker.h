@@ -3,7 +3,7 @@
 
 #include <cstdint>
 
-#include "board_types.h"
+#include "common/board_types.h"
 
 bool checkWin_4_4_4(BITBOARD candidate, BITBOARD& winBoard);
 

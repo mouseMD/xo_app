@@ -1,7 +1,7 @@
 #ifndef GAMEAPPLICATION_H
 #define GAMEAPPLICATION_H
 
-#include "common_types.h"
+#include "common/common_types.h"
 #include "gamemanager.h"
 
 class GameApplication

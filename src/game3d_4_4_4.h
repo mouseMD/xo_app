@@ -4,7 +4,7 @@
 #include <vector>
 
 #include "board/board.h"
-#include "common_types.h"
+#include "common/common_types.h"
 #include "game_types.h"
 
 class Game3D_4_4_4

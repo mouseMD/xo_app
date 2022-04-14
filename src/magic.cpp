@@ -4,7 +4,7 @@
 #include <set>
 
 #include "bitboardhelpers.h"
-#include "common_types.h"
+#include "common/common_types.h"
 
 namespace magic
 {
