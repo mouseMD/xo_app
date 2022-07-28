@@ -1,8 +1,8 @@
 #ifndef COMMON_TYPES_H
 #define COMMON_TYPES_H
 
-#include <cstdint>
 #include <array>
+#include <cstdint>
 
 using COORD_INDEX = uint8_t;
 using GAME_INDEX = uint64_t;
