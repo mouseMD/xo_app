@@ -1,8 +1,6 @@
 #ifndef GAME_TYPES_H
 #define GAME_TYPES_H
 
-#include <cstdint>
-
 enum GameStatus
 {
   NEW_GAME,

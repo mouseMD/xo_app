@@ -1,8 +1,8 @@
-#ifndef BOARD_TYPES_H
-#define BOARD_TYPES_H
+#ifndef COMMON_BOARD_TYPES_H
+#define COMMON_BOARD_TYPES_H
 
 #include <cstdint>
 
 using BITBOARD = uint64_t;
 
-#endif  // BOARD_TYPES_H
+#endif  // COMMON_BOARD_TYPES_H

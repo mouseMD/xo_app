@@ -1,5 +1,5 @@
-#ifndef COMMON_TYPES_H
-#define COMMON_TYPES_H
+#ifndef COMMON_COMMON_TYPES_H
+#define COMMON_COMMON_TYPES_H
 
 #include <array>
 #include <cstdint>
@@ -38,4 +38,4 @@ enum Player
 
 using BOARD_VIEW = std::array<Player, 64>;
 
-#endif  // COMMON_TYPES_H
+#endif  // COMMON_COMMON_TYPES_H
