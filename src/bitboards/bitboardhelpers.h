@@ -1,5 +1,5 @@
-#ifndef BITBOARDHELPERS_H
-#define BITBOARDHELPERS_H
+#ifndef BITBOARDS_BITBOARDHELPERS_H
+#define BITBOARDS_BITBOARDHELPERS_H
 
 #include <array>
 
@@ -11,4 +11,4 @@ Coordinates getCoordinatesFromBoard(BITBOARD board);
 
 std::array<Coordinates, 4> getWinCoordsFromBoard(BITBOARD board);
 
-#endif  // BITBOARDHELPERS_H
+#endif  // BITBOARDS_BITBOARDHELPERS_H

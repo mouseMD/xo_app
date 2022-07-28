@@ -1,18 +1,18 @@
 set(SOURCES
-    game3d_4_4_4.cpp
-    winchecker.cpp
-    bitboardhelpers.cpp
-    magic.cpp
+    game/game3d_4_4_4.cpp
+    bitboards/winchecker.cpp
+    bitboards/bitboardhelpers.cpp
+    magic/magic.cpp
     board/board.cpp
     )
 set(HEADERS
-    game3d_4_4_4.h
-    winchecker.h
+    game/game3d_4_4_4.h
+    bitboards/winchecker.h
     common/board_types.h
-    bitboardhelpers.h
-    game_types.h
+    bitboards/bitboardhelpers.h
+    game/game_types.h
     common/common_types.h
-    magic.h
+    magic/magic.h
     board/i_board.h
     board/board.h
     )

@@ -1,9 +1,9 @@
-#include "magic.h"
+#include "magic/magic.h"
 
 #include <algorithm>
 #include <set>
 
-#include "bitboardhelpers.h"
+#include "bitboards/bitboardhelpers.h"
 #include "common/common_types.h"
 
 namespace magic

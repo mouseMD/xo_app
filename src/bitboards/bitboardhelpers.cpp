@@ -1,4 +1,4 @@
-#include "bitboardhelpers.h"
+#include "bitboards/bitboardhelpers.h"
 
 #include <bitset>
 

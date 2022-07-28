@@ -1,5 +1,5 @@
-#ifndef MAGIC_H
-#define MAGIC_H
+#ifndef MAGIC_MAGIC_H
+#define MAGIC_MAGIC_H
 
 #include <array>
 
@@ -12,4 +12,4 @@ extern std::array<BITBOARD, 76> winPositions;
 void generateWinPositions();
 
 }  // namespace magic
-#endif  // MAGIC_H
+#endif  // MAGIC_MAGIC_H

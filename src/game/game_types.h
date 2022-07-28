@@ -1,5 +1,5 @@
-#ifndef GAME_TYPES_H
-#define GAME_TYPES_H
+#ifndef GAME_GAME_TYPES_H
+#define GAME_GAME_TYPES_H
 
 enum GameStatus
 {
@@ -16,4 +16,4 @@ enum Result
   NONE
 };
 
-#endif  // GAME_TYPES_H
+#endif  // GAME_GAME_TYPES_H

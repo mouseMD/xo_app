@@ -3,8 +3,8 @@
 #include <iostream>
 #include <string>
 
-#include "bitboardhelpers.h"
-#include "winchecker.h"
+#include "bitboards/bitboardhelpers.h"
+#include "bitboards/winchecker.h"
 
 namespace xo_3d_4
 {

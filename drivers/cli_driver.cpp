@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "game3d_4_4_4.h"
-#include "magic.h"
+#include "game/game3d_4_4_4.h"
+#include "magic/magic.h"
 
 Player reversePlayer(Player player)
 {

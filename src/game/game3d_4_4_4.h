@@ -1,11 +1,11 @@
-#ifndef GAME3D_4_4_4_H
-#define GAME3D_4_4_4_H
+#ifndef GAME_GAME3D_4_4_4_H
+#define GAME_GAME3D_4_4_4_H
 
 #include <vector>
 
 #include "board/board.h"
 #include "common/common_types.h"
-#include "game_types.h"
+#include "game/game_types.h"
 
 class Game3D_4_4_4
 {
@@ -32,4 +32,4 @@ class Game3D_4_4_4
   std::vector<Coordinates> moves_;
 };
 
-#endif  // GAME3D_4_4_4_H
+#endif  // GAME_GAME3D_4_4_4_H

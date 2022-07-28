@@ -1,6 +1,6 @@
-#include "winchecker.h"
+#include "bitboards/winchecker.h"
 
-#include "magic.h"
+#include "magic/magic.h"
 
 bool checkWin_4_4_4(BITBOARD candidate, BITBOARD &winBoard)
 {

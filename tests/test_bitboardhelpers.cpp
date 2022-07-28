@@ -1,7 +1,7 @@
 #include <bitset>
 #include <iostream>
 
-#include "bitboardhelpers.h"
+#include "bitboards/bitboardhelpers.h"
 #include "catch.hpp"
 
 using namespace std;
