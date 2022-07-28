@@ -1,4 +1,3 @@
-#include "gameapplication.h"
 #include <iostream>
 
 #include "game3d_4_4_4.h"
