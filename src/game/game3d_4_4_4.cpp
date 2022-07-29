@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+namespace xo_3d_4
+{
 Game3D_4_4_4::Game3D_4_4_4(GAME_INDEX index)
     : index_(index),
       status_(GameStatus::NEW_GAME),
@@ -94,3 +96,4 @@ std::array<Player, 64> Game3D_4_4_4::getBoard() const
 {
   return board_.getBoard();
 }
+}  // namespace xo_3d_4

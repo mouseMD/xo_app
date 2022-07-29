@@ -3,6 +3,8 @@
 #include "game/game3d_4_4_4.h"
 #include "magic/magic.h"
 
+using namespace xo_3d_4;
+
 Player reversePlayer(Player player)
 {
     return (player == Player::X_Player) ? Player::O_Player : Player::X_Player;

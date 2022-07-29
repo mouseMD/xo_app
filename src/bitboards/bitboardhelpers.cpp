@@ -2,6 +2,8 @@
 
 #include <bitset>
 
+namespace xo_3d_4
+{
 // Does not check validity of coords
 BITBOARD getBoardFromCoordinates(const Coordinates &coord)
 {
@@ -36,3 +38,4 @@ std::array<Coordinates, 4> getWinCoordsFromBoard(BITBOARD board)
   }
   return coordsArray;
 }
+}  // namespace xo_3d_4

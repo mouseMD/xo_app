@@ -5,6 +5,7 @@
 #include "catch.hpp"
 
 using namespace std;
+using namespace xo_3d_4;
 
 TEST_CASE("Test getBoardFromCoordinates", "[bitboardhelpers]")
 {

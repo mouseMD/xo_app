@@ -7,6 +7,8 @@
 #include "common/common_types.h"
 #include "game/game_types.h"
 
+namespace xo_3d_4
+{
 class Game3D_4_4_4
 {
  public:
@@ -31,5 +33,6 @@ class Game3D_4_4_4
   Result result_;
   std::vector<Coordinates> moves_;
 };
+}  // namespace xo_3d_4
 
 #endif  // GAME_GAME3D_4_4_4_H

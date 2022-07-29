@@ -4,6 +4,8 @@
 #include <array>
 #include <cstdint>
 
+namespace xo_3d_4
+{
 using COORD_INDEX = uint8_t;
 using GAME_INDEX = uint64_t;
 
@@ -37,5 +39,6 @@ enum Player
 };
 
 using BOARD_VIEW = std::array<Player, 64>;
+}  // namespace xo_3d_4
 
 #endif  // COMMON_COMMON_TYPES_H

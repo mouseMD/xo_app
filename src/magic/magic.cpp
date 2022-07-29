@@ -6,6 +6,8 @@
 #include "bitboards/bitboardhelpers.h"
 #include "common/common_types.h"
 
+namespace xo_3d_4
+{
 namespace magic
 {
 std::array<BITBOARD, 76> winPositions;
@@ -128,3 +130,4 @@ void generateWinPositions()
 }
 
 }  // namespace magic
+}  // namespace xo_3d_4
